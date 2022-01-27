@@ -14,6 +14,26 @@ fun main(args: Array<String>) {
     println(libro1.toString())
 
     //Ejercicio5.13
+    var punto=Punto(10,1)
+    var circulo=Circulo(punto, 1.0)
+    println(circulo.perimetro())
 
+    //Ejercicio5.14
+    var bola1=Bola(circulo)
+    var punto2=Punto(0,20)
+    var circulo2=Circulo(punto2, 1.0)
+    var bola2=Bola(circulo2)
+    println(bola2.colision(bola1))
+
+    //Ejercicio 5.15
+    var soldado1=Soldado("sol1","artilleria", 20.3f)
+    var soldado2=Soldado("sol2","artilleria", 20.3f)
+    var soldado3=Soldado("sol3","artilleria", 20.3f)
+    var escuadro1=Escuadron("Águila", soldado1)
+
+    //escuadro1.addSoldado(soldado1)
+    escuadro1.addSoldado(soldado2)
+    escuadro1.addSoldado(soldado3)
+    println(escuadro1.toString())
 
 }
